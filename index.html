@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>49 Psychology Hook Lines</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{box-sizing:border-box}
+body{margin:0;font-family:'Poppins',sans-serif;background:#0f0f10;color:#fff}
+
+.container{max-width:1000px;margin:auto;padding:0 20px}
+
+/* HERO */
+.hero{
+padding:70px 0 60px;
+text-align:center;
+background:radial-gradient(circle at top,#1b1b1b,#0a0a0a);
+}
+
+.badge{
+background:#ff3b3b;
+display:inline-block;
+padding:6px 12px;
+border-radius:20px;
+font-size:12px;
+margin-bottom:12px
+}
+
+h1{
+font-size:40px;
+line-height:1.2;
+margin:10px 0 14px
+}
+
+.subtitle{
+opacity:.8;
+max-width:650px;
+margin:auto;
+font-size:16px
+}
+
+.socialproof{
+margin-top:10px;
+font-size:13px;
+opacity:.7
+}
+
+.book{
+width:260px;
+margin:35px auto 20px;
+display:block;
+border-radius:16px;
+box-shadow:0 25px 60px rgba(0,0,0,.6)
+}
+
+.price{
+font-size:34px;
+font-weight:700;
+margin-top:10px
+}
+
+.btn{
+background:#ff3b3b;
+color:#fff;
+text-decoration:none;
+padding:18px 26px;
+border-radius:12px;
+font-weight:600;
+display:inline-block;
+margin-top:18px;
+box-shadow:0 15px 35px rgba(255,59,59,.4);
+transition:.25s
+}
+
+.btn:hover{transform:translateY(-2px)}
+
+.viewer{font-size:13px;margin-top:12px;opacity:.8}
+
+/* SECTION */
+.section{padding:70px 0}
+
+.section.light{background:#f5f6fa;color:#111}
+
+.section h2{
+font-size:30px;
+text-align:center;
+margin-bottom:40px
+}
+
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+gap:20px
+}
+
+.card{
+background:#fff;
+color:#111;
+padding:24px;
+border-radius:14px;
+box-shadow:0 12px 35px rgba(0,0,0,.1)
+}
+
+.card.dark{
+background:#1a1a1a;
+color:#fff;
+box-shadow:none
+}
+
+/* CHAT */
+.chat{
+background:#f1f2f6;
+padding:14px;
+border-radius:12px;
+max-width:320px;
+margin:0 auto
+}
+
+.msg{
+font-size:14px;
+padding:8px 12px;
+border-radius:14px;
+margin:6px 0;
+display:inline-block
+}
+
+.me{background:#d4ffd7}
+.her{background:#fff}
+
+/* COMPARISON */
+.compare{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:20px;
+max-width:700px;
+margin:auto
+}
+
+.bad{background:#fff3f3;padding:20px;border-radius:12px}
+.good{background:#e9fff0;padding:20px;border-radius:12px}
+
+/* VALUE */
+.valuebox{
+background:#111;
+color:#fff;
+padding:40px;
+border-radius:16px;
+text-align:center;
+max-width:700px;
+margin:auto
+}
+
+.valuebox ul{text-align:left}
+
+.bigprice{
+font-size:38px;
+font-weight:700;
+margin-top:10px
+}
+
+/* TESTIMONIAL */
+.testimonial{
+max-width:650px;
+margin:auto;
+text-align:center;
+font-size:18px;
+line-height:1.6
+}
+
+/* COUNTDOWN */
+.timer{
+font-size:40px;
+text-align:center;
+font-weight:700;
+color:#ff3b3b
+}
+
+/* STICKY */
+.sticky{
+position:fixed;
+bottom:0;
+left:0;
+width:100%;
+background:#000;
+padding:12px;
+z-index:999
+}
+
+.sticky a{
+display:block;
+background:#ff3b3b;
+text-align:center;
+padding:16px;
+border-radius:10px;
+color:#fff;
+text-decoration:none;
+font-weight:600
+}
+
+/* PURCHASE POP */
+#purchaseBox{
+position:fixed;
+bottom:90px;
+left:15px;
+background:#fff;
+color:#000;
+padding:10px 14px;
+border-radius:8px;
+font-size:13px;
+box-shadow:0 10px 30px rgba(0,0,0,.3);
+display:none
+}
+
+/* FOOTER */
+.footer{
+background:#000;
+padding:50px 20px;
+text-align:center
+}
+
+.footer p{opacity:.7;font-size:13px}
+
+</style>
+
+<script>
+let time=900
+function countdown(){
+let m=Math.floor(time/60)
+let s=time%60
+let el=document.getElementById("timer")
+if(el) el.innerHTML=m+":"+(s<10?"0":"")+s
+time--
+if(time>=0) setTimeout(countdown,1000)
+}
+
+// live viewers
+function viewers(){
+let v=Math.floor(Math.random()*25)+15
+let el=document.getElementById("viewers")
+if(el) el.innerText=v
+}
+setInterval(viewers,3000)
+
+// live downloads
+let downloads=1243
+function updateDownloads(){
+downloads+=Math.floor(Math.random()*3)
+let el=document.getElementById("downloads")
+if(el) el.innerText=downloads
+}
+setInterval(updateDownloads,4000)
+
+// bought in last 24h counter
+let bought24=312
+function updateBought(){
+ bought24+=Math.floor(Math.random()*2)
+ let el=document.getElementById("bought24")
+ if(el) el.innerText=bought24
+}
+setInterval(updateBought,6000)
+
+// stock scarcity
+let stock=17
+function reduceStock(){
+ if(stock>6){stock--}
+ let el=document.getElementById("stock")
+ if(el) el.innerText=stock
+}
+setInterval(reduceStock,9000)
+
+// live purchase popup
+function purchase(){
+const n=["Rahul","Aman","Rohit","Arjun","Karan","Vikram"]
+const c=["Delhi","Mumbai","Pune","Jaipur","Lucknow"]
+let name=n[Math.floor(Math.random()*n.length)]
+let city=c[Math.floor(Math.random()*c.length)]
+let box=document.getElementById("purchaseBox")
+box.innerHTML="🔥 "+name+" from "+city+" purchased"
+box.style.display="block"
+setTimeout(()=>box.style.display="none",3500)
+}
+setInterval(purchase,8000)
+
+// live testimonials
+const testimonials=[
+"⭐️⭐️⭐️⭐️⭐️ First message bheja aur reply aa gaya – Rohit",
+"⭐️⭐️⭐️⭐️⭐️ Instagram DM pe kaafi kaam karta hai – Aman",
+"⭐️⭐️⭐️⭐️⭐️ Simple hooks but powerful results – Vikram",
+"⭐️⭐️⭐️⭐️⭐️ Pehli baar kisi guide se actual reply mila – Arjun"
+]
+let t=0
+function rotateTestimonial(){
+let el=document.getElementById("testimonial")
+if(el){
+el.innerText=testimonials[t]
+t++
+if(t>=testimonials.length) t=0
+}
+}
+setInterval(rotateTestimonial,5000)
+
+window.onload=function(){countdown();updateDownloads();rotateTestimonial();}
+</script>
+</head>
+
+<body>
+
+<section class="hero">
+<div class="container">
+
+<div class="badge">80% OFF TODAY</div>
+
+<h1>49 Psychology Hook Lines<br>That Make Girls Reply</h1>
+
+<p class="subtitle">Copy‑paste conversation starters designed to trigger curiosity and get replies instantly.</p>
+
+<div class="socialproof">🔥 12,847+ downloads • trending DM guide</div>
+
+<img class="book" src="https://i.postimg.cc/SY487m9Q/49-hooks-1-2025-08-11-05-33-22-2025-12-11-06-56-3.webp">
+
+<div class="price">₹99</div>
+
+<a class="btn" href="https://guptakale402.systeme.io/orderfrom">Get Instant Access</a>
+
+<div class="viewer">👁 <span id="viewers">23</span> people viewing • ⬇ <span id="downloads">1243</span> downloads • 🔥 <span id="bought24">312</span> bought in last 24h • ⚠ Only <span id="stock">17</span> copies left</div>
+
+</div>
+</section>
+
+<section class="section light">
+<div class="container">
+<h2>Why Most DMs Fail</h2>
+
+<div class="compare">
+
+<div class="bad">
+<b>❌ Normal Message</b>
+<p>Hi</p>
+<p>Hey</p>
+<p>Hello</p>
+<small>Usually ignored</small>
+</div>
+
+<div class="good">
+<b>✅ Psychology Hook</b>
+<p>Tum introvert ho ya selective with people?</p>
+<p>Ek guess karu tumhari personality ke bare me?</p>
+<small>Creates curiosity → reply</small>
+</div>
+
+</div>
+</div>
+</section>
+
+<section class="section">
+<div class="container">
+<h2>Real DM Example</h2>
+
+<div class="chat">
+<div class="msg me">Ek random question puchu?</div>
+<div class="msg her">Haha pucho</div>
+<div class="msg me">Tum introvert ho ya selective?</div>
+<div class="msg her">Selective actually 😂</div>
+</div>
+
+</div>
+</section>
+
+<section class="section light">
+<div class="container">
+<h2>What You Will Learn</h2>
+
+<div class="cards">
+
+<div class="card">
+<b>Psychology Openers</b>
+<p>DM lines designed to trigger curiosity.</p>
+</div>
+
+<div class="card">
+<b>Avoid Being Ignored</b>
+<p>Openers that stand out from boring messages.</p>
+</div>
+
+<div class="card">
+<b>Conversation Hooks</b>
+<p>Make girls continue the conversation naturally.</p>
+</div>
+
+<div class="card">
+<b>Copy‑Paste Ready</b>
+<p>Use instantly on Instagram, Snapchat & WhatsApp.</p>
+</div>
+
+</div>
+</div>
+</section>
+
+<section class="section">
+<div class="container">
+
+<div class="valuebox">
+
+<h2>Value of This Guide</h2>
+
+<ul>
+<li>49 Psychology Hook Lines – ₹999</li>
+<li>Conversation Starter Pack – ₹399</li>
+<li>Psychology Attraction Tricks – ₹299</li>
+</ul>
+
+<p>Total Value: <s>₹1697</s></p>
+
+<div class="bigprice">Today Only ₹99</div>
+
+<a class="btn" href="https://guptakale402.systeme.io/orderfrom">Unlock Now</a>
+
+</div>
+
+</div>
+</section>
+
+<section class="section light">
+<div class="container">
+<h2>Real User Review</h2>
+
+<p class="testimonial" id="testimonial">⭐️⭐️⭐️⭐️⭐️ First message bheja aur reply aa gaya – Rohit</p>
+
+</div>
+</section>
+
+<section class="section">
+<div class="container">
+<h2>Offer Ends In</h2>
+
+<div class="timer" id="timer"></div>
+
+</div>
+</section>
+
+<!-- INSTAGRAM DM PROOF -->
+<section class="section light">
+<div class="container">
+<h2>Instagram DM Results</h2>
+<div style="max-width:420px;margin:auto;background:#fff;color:#000;border-radius:16px;padding:16px;box-shadow:0 10px 30px rgba(0,0,0,.15)">
+<p style="font-size:14px"><b>You:</b> Tum introvert ho ya selective?</p>
+<p style="font-size:14px"><b>Her:</b> Selective actually 😂</p>
+<p style="font-size:14px"><b>You:</b> Mujhe laga tum mysterious type ho</p>
+<p style="font-size:14px"><b>Her:</b> Haha thoda sa 😄</p>
+</div>
+</div>
+</section>
+
+<!-- CONVERSION PROGRESS BAR -->
+<section class="section">
+<div class="container">
+<h2>Offer Claimed Today</h2>
+<div style="max-width:600px;margin:auto">
+<div style="background:#222;border-radius:10px;overflow:hidden">
+<div id="progressBar" style="height:14px;width:68%;background:#ff3b3b"></div>
+</div>
+<p style="text-align:center;margin-top:8px;font-size:14px">68% of today’s discounted copies claimed</p>
+</div>
+</div>
+</section>
+
+<div id="purchaseBox"></div>
+
+<div class="sticky">
+<a href="https://guptakale402.systeme.io/orderfrom">🔥 Get 49 Hook Lines – ₹99</a>
+</div>
+
+<footer class="footer">
+
+<p>Contact: shashiguptaforu2001@gmail.com</p>
+<p>This is a digital product delivered instantly after purchase.</p>
+<p>© 2026 All Rights Reserved</p>
+
+</footer>
+
+
+
+<!-- BLUR LOCKED HOOKS PREVIEW -->
+<section class="section light">
+<div class="container">
+<h2>Preview Some Hooks</h2>
+<div style="max-width:600px;margin:auto;background:#fff;padding:20px;border-radius:12px;color:#111;position:relative">
+<ul style="filter:blur(4px);user-select:none">
+<li>Tum zyada logon se baat nahi karti ho… ya sirf interesting logon se?</li>
+<li>Ek guess karu tumhari personality ke bare me?</li>
+<li>Tum coffee person ho ya deep late night talks type?</li>
+<li>Mujhe lagta hai tum thodi mysterious ho… sahi bola?</li>
+<li>Tum introvert ho ya selective?</li>
+</ul>
+<div style="position:absolute;top:0;left:0;right:0;bottom:0;display:flex;align-items:center;justify-content:center">
+<a class="btn" href="https://guptakale402.systeme.io/orderfrom">Unlock All 49 Hooks</a>
+</div>
+</div>
+</div>
+</section>
+
+<!-- EXIT INTENT POPUP -->
+<div id="exitPopup" style="position:fixed;inset:0;background:rgba(0,0,0,.8);display:none;align-items:center;justify-content:center;z-index:9999">
+<div style="background:#fff;color:#000;padding:30px;border-radius:14px;max-width:360px;text-align:center">
+<h3>Wait! Special Discount</h3>
+<p>Get this guide for just <b>₹49</b> today.</p>
+<a class="btn" style="display:block" href="https://guptakale402.systeme.io/orderfrom">Claim ₹49 Deal</a>
+</div>
+</div>
+
+<!-- VISITOR LOCATION POPUP -->
+<div id="geoBox" style="position:fixed;right:15px;bottom:90px;background:#fff;color:#000;padding:10px 14px;border-radius:8px;font-size:13px;box-shadow:0 10px 25px rgba(0,0,0,.3);display:none"></div>
+
+<script>
+// exit intent
+let shown=false
+document.addEventListener("mouseleave",function(e){
+ if(e.clientY<10 && !shown){
+  document.getElementById("exitPopup").style.display="flex"
+  shown=true
+ }
+})
+
+// fake geo visitor popup
+const cities=["Delhi","Mumbai","Pune","Bangalore","Hyderabad","Jaipur"]
+function geoVisitor(){
+ let city=cities[Math.floor(Math.random()*cities.length)]
+ let box=document.getElementById("geoBox")
+ box.innerHTML="👀 Someone from "+city+" is viewing this page"
+ box.style.display="block"
+ setTimeout(()=>box.style.display="none",4000)
+}
+setInterval(geoVisitor,10000)
+</script>
+
+</body>
+</html>
